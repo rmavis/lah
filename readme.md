@@ -63,3 +63,29 @@ It will spit a `#t` after the new command runs. This is Racket's `true` value an
 
 1. Clone the repository.
 2. Symlink `dist/bin/lah` somewhere in your `$PATH`.
+
+
+
+## FAQ
+
+**This isn't really the best way to do this, is it?**
+
+No, not at all.
+
+**So why write it?**
+
+Because Lisp is a wonderful language and I'm not nearly as familiar with it as I'd like to be. I caught the bug and had to write it out.
+
+Here's a `fish` function to accomplish basically the same thing:
+
+    function lah
+      set old_cmd $history[1]
+      set old_exec (echo $old_cmd | cut -f 1 -d ' ')
+      set new_exec $argv[1]
+      set new_cmd (echo $old_cmd | sed "s/$old_exec/$new_exec/")
+      eval $new_cmd
+    end
+
+**You'd make a terrible CTO, wouldn't you?**
+
+Yes, probably.
