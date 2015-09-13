@@ -53,7 +53,7 @@ will run `emacs readme.md notes todo.org`.
 
 This is an alpha. It's my first work with Racket.
 
-It currently only works with the `[fish](http://fishshell.com/)` shell.
+It currently only works with the [`fish`](http://fishshell.com/) shell.
 
 It will spit a `#t` after the new command runs. This is Racket's `true` value and its appearance in your terminal means that `lah` ran fine. I just don't yet know how to prevent that from appearing.
 
