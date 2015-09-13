@@ -21,7 +21,7 @@ There are three ways to create that second command:
 
 1. Type the whole thing out.
 2. Hit the up arrow, alt-arrow back through the path, delete the `cat`, type in `emacs`.
-3. The same as #2 but you hit ctrl-a instead of alt-arrowing.
+3. The same as #2 but you hit `ctrl-a` instead of alt-arrowing.
 
 And here's a fourth method:
 
@@ -53,9 +53,9 @@ will run `emacs readme.md notes todo.org`.
 
 This is an alpha. It's my first work with Racket.
 
-It currently only works with the `[fish][]` shell.
+It currently only works with the `[fish](http://fishshell.com/)` shell.
 
-It will spit a `#t` after the `lah`'d command runs. This is Racket's `true` value, that its appearance in your terminal means `lah` ran fine. I don't yet know how to prevent that from appearing.
+It will spit a `#t` after the new command runs. This is Racket's `true` value and its appearance in your terminal means that `lah` ran fine. I just don't yet know how to prevent that from appearing.
 
 
 
@@ -63,9 +63,3 @@ It will spit a `#t` after the `lah`'d command runs. This is Racket's `true` valu
 
 1. Clone the repository.
 2. Symlink `dist/bin/lah` somewhere in your `$PATH`.
-
-
-
-
-
-[fish]: http://fishshell.com/

@@ -4,15 +4,17 @@
 (require racket/string)
 (require scheme/system)
 
+
 ;;
 ;; TODO
 ;;
-;; X get history file
-;; X read last command entry
-;; should skip `lah` commands when reading history
-;; X replace command with new one
-;; execute new command
+;; other shells
+;; other flags? Like `lah -2 what` to lah the second to last command?
+;; no more `#t` returns in terminal
+;; help/error messages
 ;;
+
+
 
 (define INFILE "~/.config/fish/fish_history")
 
@@ -111,16 +113,3 @@
      (displayln (help-message)))))
 
 (parse-args)
-
-
-
-;;
-;; Sensible use cases:
-;;
-;; $ cat /etc/hosts
-;; $ lah emacs
-;; -> emacs /etc/hosts
-;;
-;; $ lah emacs whatevr
-;; -> emacs /etc/hosts whatever
-;;
